@@ -86,7 +86,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="users/login.html">Войти</a>
+                <a class="nav-link text-white" href="{% url "users:login" %}">Войти</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -107,7 +107,7 @@
                   <li>
                     <a
                       class="dropdown-item text-white"
-                      href="users/profile.html"
+                      href="{% url "users:profile" %}"
                       >Личный кабинет</a
                     >
                   </li>
