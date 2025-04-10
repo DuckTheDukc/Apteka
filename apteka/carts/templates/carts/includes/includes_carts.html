@@ -18,9 +18,9 @@
               <button
                 type="button"
                 class="btn btn-dark btn-sm decrement"
-                data-cart-id=""
-                data-cart-change-url=""
-              >
+                data-cart-id="{{cart.id}}"
+                data-cart-change-url="{% url "cart:cart_change" %}"
+              >{% csrf_token %}
                 -
               </button>
             </span>
@@ -34,9 +34,9 @@
               <button
                 type="button"
                 class="btn btn-dark btn-sm increment"
-                data-cart-id=""
-                data-cart-change-url=""
-              >
+                data-cart-id="{{cart.id}}"
+                data-cart-change-url="{% url "cart:cart_change" %}"
+              >{% csrf_token %}
                 +
               </button>
             </span>
@@ -50,8 +50,8 @@
           <a
             href="{% url "cart:cart_remove"%}"
             class="remove-from-cart"
-            data-cart-id=""
-          >
+            data-cart-id="{{cart.id}}"
+          >{% csrf_token %}
             <img
               class="mx-1"
               src="{%static 'deps/icons/trash3-fill.svg' %}"
