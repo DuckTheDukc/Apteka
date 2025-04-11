@@ -3,10 +3,12 @@
 {%load static%}
 
 
+{% load carts_tags %}
+
 
 
 {% block content %}
-
+{%user_carts request as carts%}
                     <div class="row">
                         <div class="container mt-5">
                             <div class="row">
@@ -89,7 +91,7 @@
                                             <!-- Закончилась разметка корзины -->
                                         </div>
                                         {% if carts %}
-                                        <a class="btn btn-dark" href="../orders/create_order.html">
+                                        <a class="btn btn-dark" href="{% url "orders:create_order" %}">
                                             Оформить заказ
                                         </a>
                                         {% endif %}
